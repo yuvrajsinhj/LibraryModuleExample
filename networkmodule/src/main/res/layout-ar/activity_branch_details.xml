@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layoutDirection="rtl"
+        android:id="@+id/clMain"
+        android:background="@color/home_bg_color_gray"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/llMain"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context="com.sample.foo.usingcoordinatorlayout.FabAndSnackbarActivity">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="24dp">
+
+                <ImageView
+                    android:id="@+id/ivClose"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+
+                    android:background="@drawable/bg_search"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/ic_close"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:fillViewport="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp">
+
+                        <!--
+                                            <androidx.cardview.widget.CardView
+                                                android:layout_width="48dp"
+                                                android:layout_height="48dp"
+                                                app:cardCornerRadius="8dp"
+                                                app:cardBackgroundColor="@color/white">
+                                                <androidx.appcompat.widget.AppCompatImageView
+                                                    android:id="@+id/ivThumbDetails"
+                                                    android:layout_width="36dp"
+                                                    android:layout_height="36dp"
+                                                    android:layout_gravity="center"
+                                                    android:scaleType="centerCrop"
+                                                    />
+                                            </androidx.cardview.widget.CardView>
+                        -->
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivThumbDetails"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:background="@drawable/card_bg_two"
+                            android:padding="19dp"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/bg_days_gray" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:layout_marginEnd="16dp"
+                            android:orientation="vertical">
+
+                            <com.androhub.networkmodule.uc.CustomTextView
+                                android:id="@+id/tvBankName"
+                                style="@style/TextView_Large"
+                                android:layout_height="match_parent"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/color_black"
+                                android:textSize="20sp"
+
+                                app:custom_font="semiBold"
+                                tools:text="Bank al Etihad" />
+
+                            <com.androhub.networkmodule.uc.CustomTextView
+                                android:id="@+id/tvMerchantName"
+                                style="@style/TextView_Large"
+                                android:maxLines="100"
+                                android:ellipsize="end"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/text_view_light_color"
+                                android:textSize="12sp"
+                                app:custom_font="regular"
+                                tools:text="@string/close_str" />
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.androhub.networkmodule.uc.CustomTextView
+                                    android:id="@+id/tvBranchTiming"
+                                    style="@style/TextView_Large"
+
+                                    android:textColor="@color/color_orange"
+                                    android:textSize="12sp"
+                                    app:custom_font="regular" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivBranchTiming"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:src="@drawable/iv_info" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <com.androhub.networkmodule.uc.CustomTextView
+                        style="@style/TextView_Large"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:visibility="gone"
+                        android:text="@string/open_hours"
+                        android:textColor="@color/color_black"
+                        android:textSize="14sp"
+                        app:custom_font="semiBold" />
+
+
+                    <!--  <androidx.cardview.widget.CardView
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginStart="16dp"
+                          android:layout_marginTop="16dp"
+                          android:layout_marginEnd="16dp"
+                          app:cardCornerRadius="8dp">-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:visibility="gone"
+                        android:background="@drawable/card_bg_two"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llTodayTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvBranchTiming"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="@color/view_color" />
+
+                    </LinearLayout>
+
+
+                    <!--  </androidx.cardview.widget.CardView>-->
+
+
+                    <com.androhub.networkmodule.uc.CustomTextView
+                        style="@style/TextView_Large"
+                        android:id="@+id/txtLabel"
+                        android:layout_marginStart="16dp"
+
+                        android:layout_marginEnd="16dp"
+                        android:drawablePadding="4dp"
+                        android:text="@string/choose_service"
+                        android:textColor="@color/color_black"
+                        android:textSize="14sp"
+                        app:custom_font="semiBold" />
+
+                    <!--    <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp">-->
+                    <androidx.core.widget.ContentLoadingProgressBar
+                        android:id="@+id/pgbSegment"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:indeterminate="true"
+                        android:visibility="invisible" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvNearByBranch"
+                        android:layout_marginTop="-10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        tools:listitem="@layout/item_branch_detail"
+                        android:layout_marginBottom="22dp"
+                        android:background="@drawable/card_bg_two"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                    <include
+                        android:id="@+id/layoutNoData"
+                        layout="@layout/layout_no_data_found"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="22dp"/>
+
+                    <!--   </androidx.cardview.widget.CardView>-->
+
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+        <include
+            android:id="@+id/llProgressBar"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/dialog_progress"/>
+    </RelativeLayout>
+</layout>

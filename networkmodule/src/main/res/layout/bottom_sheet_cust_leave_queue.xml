@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:id="@+id/bottom_sheet_layout"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="locale"
+        android:background="@drawable/rounded_dialog_two_corner"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="130dp"
+
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+
+            android:paddingStart="16dp"
+
+            android:paddingBottom="10dp"
+            android:paddingEnd="16dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                app:srcCompat="@drawable/ic_close_circle_gray" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgClock"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/red_light_bg"
+                android:padding="8dp"
+                app:srcCompat="@drawable/ic_leave_orange" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgClock"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.androhub.networkmodule.uc.CustomTextView
+                    style="@style/TextView_Large"
+                    android:id="@+id/tv_leaveHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textSize="26sp"
+                    android:text="@string/leave_queue_question_mark"
+                    android:textColor="@color/font_black"
+                    app:custom_font="semiBold" />
+
+                <com.androhub.networkmodule.uc.CustomTextView
+                    style="@style/TextView_Medium"
+                    android:id="@+id/tv_cancle_desc"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/cancel_e_service_desc"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:textColor="@color/font_grey"
+                    app:custom_font="regular" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp">
+                    <com.androhub.networkmodule.uc.CustomTextView
+                        android:id="@+id/txtCancelQueue"
+                        style="@style/TextView_Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="12dp"
+                        android:background="@drawable/btn_shape_capsule"
+
+                        android:gravity="center"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="18dp"
+                        android:text="@string/stay_in_queue"
+                        android:textSize="16sp"
+                        android:textColor="@color/color_black"
+                        app:custom_font="bold" />
+
+                    <com.androhub.networkmodule.uc.CustomTextView
+                        android:id="@+id/txtLeaveQueue"
+                        style="@style/TextView_Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="12dp"
+                        android:background="@drawable/btn_bg_red"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="18dp"
+                        android:text="@string/leave_queue"
+                        android:textColor="@color/white"
+                        app:custom_font="bold" />
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </RelativeLayout>
+    </FrameLayout>
+</layout>

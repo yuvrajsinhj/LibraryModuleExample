@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layoutDirection="locale"
+        android:id="@+id/rlMainProgress"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@android:color/transparent">
+
+        <ProgressBar
+            android:id="@+id/progressLoadmore"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            app:dpArrowHourPaddingPercent="40"
+            app:dpArrowMinutePaddingPercent="30"
+            app:dpArrowWidthPercent="0"
+            app:dpDotsCount="10"
+            app:dpArrowMinuteSpeed="20"
+            app:dpArrowHourSpeed="5"
+            app:dpClockwiseDots="true"
+            app:dpRotationSpeed="5"
+            app:dpMaxDotsSizePercent="14"
+            app:dpMinDotsSizePercent="4"/>
+
+        <!--
+                <ProgressBar
+                    android:id="@+id/progressLoadmore"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center" />
+        -->
+
+        <!--<ProgressBar
+            android:id="@+id/progressLoadmore"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:progressDrawable="@drawable/custom_progressbar_loadmore" />-->
+
+    </RelativeLayout>
+</layout>

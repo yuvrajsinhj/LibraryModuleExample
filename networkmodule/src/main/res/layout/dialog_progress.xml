@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@android:color/transparent">
+
+    <!--<ProgressBar
+        android:id="@+id/pdlg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        style="@style/MyTheme"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />-->
+
+    <com.androhub.networkmodule.uc.DottedProgressBar
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:dpArrowHourPaddingPercent="40"
+        app:dpArrowMinutePaddingPercent="30"
+        app:dpArrowWidthPercent="0"
+        app:dpDotsCount="12"
+        app:dpArrowMinuteSpeed="20"
+        app:dpArrowHourSpeed="5"
+        app:dpClockwiseDots="true"
+        app:dpRotationSpeed="5"
+        app:dpMaxDotsSizePercent="14"
+        app:dpMinDotsSizePercent="4"/>
+</LinearLayout>

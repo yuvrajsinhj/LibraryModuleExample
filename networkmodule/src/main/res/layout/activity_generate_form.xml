@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mini_app_root_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.androhub.networkmodule.uc.CustomTextView
+                        android:id="@+id/tvFormDescription"
+                        style="@style/TextView_Large"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginEnd="10dp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/color_black"
+                        android:textSize="20sp"
+                        app:custom_font="semiBold"
+                        tools:text="Bank al Etihad" />
+
+                    <com.androhub.networkmodule.uc.CustomTextView
+                        android:id="@+id/tvFormDescriptionMore"
+
+                        style="@style/TextView_Large"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:ellipsize="end"
+                        android:maxLines="100"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/text_view_light_color"
+                        android:textSize="12dp"
+                        app:custom_font="regular"
+                        tools:text="Aaaaaaaaaaaaaaaaaaaaaaaaaan" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/card_bg">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivThumbDetails"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:background="@drawable/card_bg_two"
+                            android:padding="19dp"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/bg_days_gray" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="16dp"
+                            android:orientation="vertical">
+
+                            <com.androhub.networkmodule.uc.CustomTextView
+                                android:id="@+id/tvBankName"
+                                style="@style/TextView_Large"
+                                android:layout_height="match_parent"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/color_black"
+                                android:textSize="20sp"
+                                app:custom_font="semiBold"
+                                tools:text="Bank al Etihad" />
+
+                            <com.androhub.networkmodule.uc.CustomTextView
+                                android:id="@+id/tvMerchantName"
+
+                                style="@style/TextView_Large"
+                                android:ellipsize="end"
+                                android:maxLines="100"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/text_view_light_color"
+                                android:textSize="12sp"
+                                app:custom_font="regular"
+                                tools:text="Aaaaaaaaaaaaaaaaaaaaaaaaaan" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mini_app_form_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imgToolbarLeft"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_search"
+            android:padding="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_close" />
+
+        <com.androhub.networkmodule.uc.CustomTextView
+            android:id="@+id/btnSkip"
+            style="@style/TextView_Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:drawableEnd="@drawable/ic_chevron_right_blue"
+            android:gravity="center_vertical"
+            android:text="@string/skip"
+            android:textColor="@color/font_blue"
+            android:textDirection="ltr"
+            android:textSize="14sp"
+            android:visibility="visible"
+            app:custom_font="regular"
+            app:layout_constraintBottom_toBottomOf="@+id/imgToolbarLeft"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imgToolbarLeft" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

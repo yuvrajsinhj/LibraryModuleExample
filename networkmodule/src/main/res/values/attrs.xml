@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SwipeButtonView">
+        <attr name="sb_swipe_bg_color" format="color" />
+        <attr name="sb_thumb_bg_color" format="color" />
+        <attr name="sb_stroke_bg_color" format="color" />
+        <attr name="sb_thumb_image" format="reference" />
+        <attr name="sb_swipe_text" format="string" />
+        <attr name="sb_swipe_text_color" format="color" />
+        <attr name="sb_swipe_animate_text" format="boolean" />
+        <attr name="sb_swipe_text_size" format="dimension" />
+        <attr name="sb_swipe_reverse" format="boolean" />
+        <attr name="sb_swipe_both_direction" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="DottedProgressBar">
+        <attr name="dpStyle" format="reference" />
+        <attr name="dpBaseColor" format="color" />
+        <attr name="dpArrowsColor" format="color" />
+        <attr name="dpCenterColor" format="color" />
+        <attr name="dpClockwiseDots" format="boolean" />
+        <attr name="dpCounterClockwiseArrows" format="boolean" />
+        <attr name="dpHideArrows" format="boolean" />
+        <attr name="dpDotsCount" format="integer" />
+        <attr name="dpMaxDotsSizePercent" format="integer" />
+        <attr name="dpMinDotsSizePercent" format="integer" />
+        <attr name="dpArrowWidthPercent" format="integer" />
+        <attr name="dpArrowHourPaddingPercent" format="integer" />
+        <attr name="dpArrowMinutePaddingPercent" format="integer" />
+        <attr name="dpArrowHourSpeed" format="integer" />
+        <attr name="dpArrowMinuteSpeed" format="integer" />
+        <attr name="dpRotationSpeed" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="AvatarImageBehavior">
+        <attr name="finalXPosition" format="dimension"/>
+        <attr name="finalYPosition" format="dimension"/>
+        <attr name="finalHeight" format="dimension"/>
+        <attr name="finalToolbarHeight" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="CustomView">
+        <attr name="custom_font" format="enum">
+            <enum name="none" value="0" />
+            <enum name="regular" value="1" />
+            <enum name="bold" value="2" />
+            <enum name="semiBold" value="3" />
+            <enum name="medium" value="4" />
+            <enum name="light" value="5" />
+            <enum name="medium_italic" value="6" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="ZoomageView">
+        <attr name="zoomage_zoomable" format="boolean" />
+        <attr name="zoomage_translatable" format="boolean" />
+        <attr name="zoomage_restrictBounds" format="boolean" />
+        <attr name="zoomage_animateOnReset" format="boolean" />
+        <attr name="zoomage_doubleTapToZoom" format="boolean" />
+        <attr name="zoomage_doubleTapToZoomScaleFactor" format="float" />
+        <attr name="zoomage_autoCenter" format="boolean" />
+        <attr name="zoomage_minScale" format="float" />
+        <attr name="zoomage_maxScale" format="float" />
+        <attr name="zoomage_autoResetMode" format="enum">
+            <enum name="UNDER" value="0" />
+            <enum name="OVER" value="1" />
+            <enum name="ALWAYS" value="2" />
+            <enum name="NEVER" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="PageIndicatorView">
+
+
+
+        <attr name="piv_orientation">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+
+        <attr name="piv_viewPager" format="reference" />
+        <attr name="piv_select" format="integer" />
+
+        <attr name="piv_count" format="integer" />
+        <attr name="piv_dynamicCount" format="boolean" />
+
+        <attr name="piv_radius" format="dimension" />
+        <attr name="piv_padding" format="dimension" />
+        <attr name="piv_strokeWidth" format="dimension" />
+        <attr name="piv_scaleFactor" format="float" />
+        <attr name="piv_autoVisibility" format="boolean" />
+
+        <attr name="piv_unselectedColor" format="color" />
+        <attr name="piv_selectedColor" format="color" />
+
+        <attr name="piv_interactiveAnimation" format="boolean" />
+        <attr name="piv_animationDuration" format="integer" />
+        <attr name="piv_animationType">
+            <enum name="none" value="0" />
+            <enum name="color" value="1" />
+            <enum name="scale" value="2" />
+            <enum name="worm" value="3" />
+            <enum name="slide" value="4" />
+            <enum name="fill" value="5" />
+            <enum name="thinWorm" value="6" />
+            <enum name="drop" value="7" />
+            <enum name="swap" value="8" />
+            <enum name="scale_down" value="9" />
+        </attr>
+        <attr name="piv_rtl_mode">
+            <enum name="on" value="0" />
+            <enum name="off" value="1" />
+            <enum name="auto" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="SliderView">
+
+        <attr name="sliderIndicatorOrientation">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="sliderIndicatorEnabled" format="boolean" />
+        <attr name="sliderIndicatorRadius" format="dimension" />
+        <attr name="sliderIndicatorPadding" format="dimension" />
+        <attr name="sliderIndicatorMargin" format="dimension" />
+        <attr name="sliderIndicatorMarginLeft" format="dimension" />
+        <attr name="sliderIndicatorMarginRight" format="dimension" />
+        <attr name="sliderIndicatorMarginTop" format="dimension" />
+        <attr name="sliderIndicatorMarginBottom" format="dimension" />
+
+        <attr name="sliderIndicatorGravity">
+            <flag name="bottom" value="80" />
+            <flag name="center" value="17" />
+            <flag name="center_horizontal" value="1" />
+            <flag name="center_vertical" value="16" />
+            <flag name="clip_horizontal" value="8" />
+            <flag name="clip_vertical" value="128" />
+            <flag name="end" value="8388613" />
+            <flag name="fill" value="119" />
+            <flag name="fill_horizontal" value="7" />
+            <flag name="fill_vertical" value="112" />
+            <flag name="left" value="3" />
+            <flag name="right" value="5" />
+            <flag name="start" value="8388611" />
+            <flag name="top" value="48" />
+        </attr>
+
+        <attr name="sliderIndicatorUnselectedColor" format="color" />
+        <attr name="sliderIndicatorSelectedColor" format="color" />
+        <attr name="sliderIndicatorAnimationDuration" format="integer" />
+        <attr name="sliderAnimationDuration" format="integer" />
+
+
+        <attr name="sliderIndicatorRtlMode">
+            <enum name="on" value="0" />
+            <enum name="off" value="1" />
+            <enum name="auto" value="2" />
+        </attr>
+
+        <attr name="sliderScrollTimeInSec" format="integer" />
+        <attr name="sliderAutoCycleEnabled" format="boolean" />
+
+         <attr name="sliderStartAutoCycle" format="boolean" />
+
+        <attr name="sliderAutoCycleDirection">
+            <enum name="right" value="0" />
+            <enum name="left" value="1" />
+            <enum name="back_and_forth" value="2" />
+        </attr>
+
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/rounded_dialog_two_corner"
+        android:layoutDirection="locale"
+        android:paddingStart="15dp"
+
+        android:paddingTop="10dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="10dp"
+        android:textDirection="locale">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            app:srcCompat="@drawable/ic_close_circle_gray" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgClock"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn_shape_blue_oval_faded"
+            android:padding="8dp"
+            android:tint="@color/font_blue"
+            app:srcCompat="@drawable/ic_booked_blue" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgClock"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.androhub.networkmodule.uc.CustomTextView
+                style="@style/TextView_Large_extra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/str_booking"
+                android:textAlignment="viewStart"
+                android:textColor="@color/font_black"
+                android:textSize="26dp"
+                app:custom_font="semiBold" />
+
+            <com.androhub.networkmodule.uc.CustomTextView
+                android:id="@+id/tvInfoMsg"
+                style="@style/TextView_Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="@string/book_ticket_info"
+                android:textAlignment="center"
+                android:textColor="@color/font_grey"
+                android:textSize="16dp"
+                app:custom_font="regular" />
+
+            <include
+                android:id="@+id/include"
+                layout="@layout/item_instruction" />
+
+            <View
+                android:id="@+id/viewDoted"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_doted_vertical_line"
+                android:layerType="software"
+                android:visibility="gone" />
+
+            <com.androhub.networkmodule.uc.DottedProgressBar
+                android:id="@+id/progressLoadmorePeople"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                app:dpArrowHourPaddingPercent="40"
+                app:dpArrowHourSpeed="5"
+                app:dpArrowMinutePaddingPercent="30"
+                app:dpArrowMinuteSpeed="20"
+                app:dpArrowWidthPercent="0"
+                app:dpClockwiseDots="true"
+                app:dpDotsCount="10"
+                app:dpMaxDotsSizePercent="14"
+                app:dpMinDotsSizePercent="4"
+                app:dpRotationSpeed="5" />
+
+            <LinearLayout
+                android:id="@+id/llPeopleData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="22dp"
+                android:gravity="center"
+                android:layoutDirection="ltr"
+                android:orientation="horizontal"
+                android:textDirection="firstStrongLtr"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/txtCancel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llCentre">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_time_orange" />
+
+                    <com.androhub.networkmodule.uc.CustomTextView
+                        android:id="@+id/tvTime"
+                        style="@style/TextView_Large"
+                        android:layout_marginTop="16dp"
+                        android:textColor="@color/color_black"
+                        android:textSize="24sp"
+                        app:custom_font="bold"
+                        tools:text="26:34" />
+
+                    <com.androhub.networkmodule.uc.CustomTextView
+                        android:id="@+id/tvAwait"
+                        style="@style/TextView_Large"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:text="@string/waiting_time_in_queue"
+                        android:textColor="@color/text_view_light_color"
+                        android:textSize="14sp"
+                        app:custom_font="regular" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@color/view_color_one" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_people_green" />
+
+                    <com.androhub.networkmodule.uc.CustomTextView
+                        android:id="@+id/tvMember"
+                        style="@style/TextView_Large"
+                        android:layout_marginTop="16dp"
+                        android:textColor="@color/color_black"
+                        android:textSize="24sp"
+                        app:custom_font="bold"
+                        tools:text="9" />
+
+                    <com.androhub.networkmodule.uc.CustomTextView
+                        style="@style/textView_helvetica_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="16dp"
+
+                        android:gravity="center"
+                        android:text="@string/people_in_queue"
+                        android:textColor="@color/text_view_light_color"
+                        android:textSize="14sp"
+                        app:custom_font="regular" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.androhub.networkmodule.uc.CustomTextView
+                android:id="@+id/tvClose"
+                style="@style/TextView_Large"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_bg_light_orange"
+                android:drawableStart="@drawable/btn_shape_orange_oval_solid"
+                android:drawablePadding="4dp"
+                android:paddingStart="14dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="6dp"
+                android:text="@string/closed_now"
+                android:textColor="@color/red_color"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:custom_font="semiBold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <FrameLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp">
+
+                <ProgressBar
+                    android:id="@+id/pgbFaster"
+
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center"
+
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/btn_default"
+                    android:indeterminateTintMode="src_in"
+                    android:paddingEnd="25dp"
+                    android:visibility="visible" />
+
+                <com.androhub.networkmodule.uc.CustomTextView
+                    android:id="@+id/txtInstantTicket"
+                    style="@style/TextView_Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_shape_green"
+                    android:clickable="true"
+                    android:drawableStart="@drawable/ic_ticket_green"
+                    android:drawablePadding="16dp"
+
+                    android:focusable="true"
+                    android:foreground="@drawable/ripple_bg"
+                    android:paddingStart="24dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="25dp"
+                    android:paddingBottom="12dp"
+                    android:text="@string/book_an_instant_ticket"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/font_green"
+                    android:textSize="16dp"
+                    app:custom_font="semiBold" />
+            </FrameLayout>
+
+            <com.androhub.networkmodule.uc.CustomTextView
+                android:id="@+id/txtBack"
+                style="@style/TextView_Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/btn_shape_white"
+                android:paddingStart="26dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="25dp"
+                android:paddingBottom="12dp"
+                android:text="@string/back_to_services"
+                android:textAlignment="viewStart"
+                android:textColor="@color/font_black"
+                android:textSize="16dp"
+                android:visibility="gone"
+                app:custom_font="semiBold" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </RelativeLayout>
+</layout>

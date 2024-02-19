@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.androhub.networkmodule.uc.swipeButton.controller.Swipe_Button_Controller
+        android:id="@+id/sb_swipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:clickable="false"
+        android:max="100"
+        android:maxHeight="35dp"
+        android:minHeight="35dp"
+        android:progressDrawable="@android:color/transparent"
+        android:splitTrack="false"
+        android:thumb="@drawable/sb_thumb_bg"
+        android:thumbOffset="20dp"
+        tools:ignore="UnusedAttribute" />
+
+    <TextView
+
+        style="@style/TextView_Small"
+        app:custom_font="bold"
+        android:id="@+id/sb_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textAlignment="center"
+        android:layout_marginEnd="10dp"
+        android:drawableStart="@drawable/ic_three_arrow_ar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:drawablePadding="4dp"
+        android:layout_marginStart="60dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="bold"
+        tools:text="Swipe to delete" />
+</merge>

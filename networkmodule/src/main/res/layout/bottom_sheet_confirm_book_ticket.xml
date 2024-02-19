@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/rounded_dialog_two_corner"
+        android:layoutDirection="ltr"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="10dp"
+        android:textDirection="firstStrongLtr">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            app:srcCompat="@drawable/ic_close_circle_gray" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgClock"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/btn_shape_green_oval_faded"
+                android:padding="8dp"
+
+                app:srcCompat="@drawable/ic_check_green" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgGif"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="15dp"
+                android:visibility="gone"
+
+
+                app:srcCompat="@drawable/ic_check_green" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llImage"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.androhub.networkmodule.uc.CustomTextView
+                style="@style/TextView_Large_extra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/confirm_ticket_title"
+                android:textAlignment="viewStart"
+                android:textColor="@color/font_black"
+                android:textSize="26dp"
+                app:custom_font="semiBold" />
+
+            <com.androhub.networkmodule.uc.CustomTextView
+                android:id="@+id/tvInfoMsg"
+                style="@style/TextView_Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:lineSpacingExtra="5dp"
+                android:text="@string/confirm_book_ticket_info"
+                android:textAlignment="center"
+                android:textColor="@color/font_grey_conf"
+                android:textSize="16dp"
+                app:custom_font="regular" />
+
+            <include
+                android:id="@+id/include"
+                layout="@layout/item_instruction" />
+
+            <View
+                android:id="@+id/viewDoted"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_doted_vertical_line"
+                android:layerType="software"
+                android:visibility="gone" />
+
+
+
+
+
+            <com.androhub.networkmodule.uc.CustomTextView
+                android:id="@+id/txtConfirm"
+                style="@style/TextView_Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_shape_green"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/ripple_bg"
+
+                android:paddingStart="24dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="25dp"
+                android:paddingBottom="12dp"
+                android:text="@string/confirm_booking"
+                android:textAlignment="center"
+                android:textColor="@color/font_green"
+                android:textSize="16dp"
+                app:custom_font="semiBold" />
+
+            <com.androhub.networkmodule.uc.CustomTextView
+                android:id="@+id/txtBack"
+                style="@style/TextView_Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/btn_shape_white"
+                android:paddingStart="24dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="25dp"
+                android:paddingBottom="12dp"
+                android:text="@string/back_to_services"
+                android:textAlignment="center"
+                android:textColor="@color/font_black"
+                android:textSize="16dp"
+                app:custom_font="semiBold" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <include
+            android:id="@+id/llProgressBar"
+            layout="@layout/dialog_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </RelativeLayout>
+</layout>

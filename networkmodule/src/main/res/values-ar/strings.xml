@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyLib</string>
+
+
+    <string name="camera">الكاميرا</string>
+    <string name="gallery">استوديو الصور</string>
+
+
+    <string name="dialog_title_permission">الإذن</string>
+    <string name="settings_caps">الإعدادات</string>
+    <string name="cancel_caps">إلغاء</string>
+    <string name="no_internet_available">لا يوجد إنترنت متاح!</string>
+
+
+    <string name="str_booking">الحجز</string>
+    <string name="book_an_instant_ticket">أخذ تذكرة فورية</string>
+
+    <string name="please_grant_permission">من فضلك إعطاء الصلاحية</string>
+
+    <string name="submit">أرسل</string>
+
+    <string name="your_ticket_withdrawal_service">تذكرتك ل %s</string>
+    <string name="your_appointment_withdrawal_service">موعدك في %s</string>
+
+    <string name="book_ticket_info">للإستفادة من خدمات %s ، يمكنك الحصول على تذكرة فورية</string>
+
+    <string name="book_ticket_info_other"> يبدو أنك بعيد عن الفرع , قد يتم إستدعاء تذكرتك قبل وصولك</string>
+
+    <string name="confirm_book_ticket_info"><![CDATA[من فضلك تأكيد حجز التذكرة  <b><font color=#000000>%s</font></b> على  <b><font color=#000000>%s</font></b>]]> </string>
+    <string name="ok">حسنا</string>
+    <string name="cancel">إلغاء</string>
+
+    <string name="waiting_time_in_queue">بانتظار بدء تقديم الخدمة</string>
+    <string name="people_in_queue">عدد الأشخاص في قائمة الإنتظار</string>
+    <string name="leave_queue">إلغاء الدور</string>
+    <string name="swipte_cancel_ticket">إسحب لإلغاء التذكرة</string>
+    <string name="cancel_booking">إلغاء الحجز</string>
+    <string name="nearby_branches">فروع  بالقرب منك</string>
+    <string name="str_language">اللغة</string>
+    <string name="other_branches">فروع أخرى</string>
+    <string name="book">إحجز</string>
+    <string name="no_results_were_found">لا  يوجد نتائج للبحث</string>
+    <string name="closed_now">مغلق حالياً</string>
+    <string name="choose_service">اختر الخدمة</string>
+    <string name="services">الخدمة</string>
+    <string name="leave_queue_question_mark">مغادرة الدور؟</string>
+    <string name="cancel_appointment">إلغاء حجز الموعد؟</string>
+    <string name="are_you_sure_you_want_to_cancel_your_booking_by_cancelling_you_will_lose_your_booking">هل أنت متأكد من إلغاء الحجز؟ في حال قمت في الإلغاء سوف تخسر دورك</string>
+    <string name="confirm_booking">تأكيد الحجز</string>
+    <string name="open_hours">ساعات العمل</string>
+    <string name="something_went_working">حدث خطأ من النظام</string>
+    <string name="please_try_again">خطأ من النظام، من فضلك إعادة المحاولة لاحقاً</string>
+    <string name="stay_in_queue">البقاء في الدور</string>
+    <string name="keep_booking">الإستمرار في الحجز</string>
+
+    <string name="sucess_cancelled">تم إلغاء التذكرة في نجاح</string>
+    <string name="queue_not_found">نعتذر الدور ليس متاح، يرجى المحاولة لاحقاً</string>
+    <string name="today">اليوم</string>
+    <string name="sunday">الأحد</string>
+    <string name="monday">الإثنين</string>
+    <string name="tuesday">الثلاثاء</string>
+    <string name="wednesday">الأربعاء</string>
+    <string name="thursday">الخميس</string>
+    <string name="friday">الجمعة</string>
+    <string name="closed">مغلق</string>
+    <string name="satruday">السبت</string>
+    <string name="change_lang_one" translatable="false">العربية</string>
+    <string name="change_lang_two" translatable="false">English</string>
+
+    <string name="branches">&#160; أفرع&#160;</string>
+    <string name="kimi">&#160; كم&#160;</string>
+    <string name="confirm_ticket_title">تأكيد التذكرة؟</string>
+
+    <string name="back_to_services">العودة للخدمات</string>
+    <string name="not_found_branch">نأسف لم نتمكن من الحصول على معلومات عن الفرع</string>
+    <string name="inactive_branch">الفرع غير فعال , الرجاء التواصل مع مزود الخدمة</string>
+    <string name="inactive_merchant">الخدمة غير متوفرة في الوقت الحالي</string>
+    <string name="mins_suffix">&#160;دقيقة&#160;</string>
+    <string name="min_suffix">&#160;دقيقة&#160;</string>
+    <string name="go_to_counter_str"><![CDATA[ <b>  الذهاب إلى الكاونتر  <font color=#000000>%s</font></b>]]> </string>
+    <string name="missed_your_turn"><![CDATA[<b><font color=#000000>لم تتمكن من اللحاق بدورك، يمكنك الحصول على الخدمة داخل الفرع خلال %s دقائق</font></b>]]></string>
+    <!--    <string name="go_to_counter_str">%s الذهاب إلى الكاونتر  </string>-->
+    <string name="branch_str">&#160;فرع&#160;</string>
+    <!--ticket status-->
+    <string name="status_in_processed">قيد المعالجة</string>
+    <string name="status_processed">تم معالجتها</string>
+    <string name="status_no_show">لم يتم الحضور</string>
+    <string name="status_cancelled">ملغي</string>
+    <string name="status_completed">تم الإنتهاء من التذكرة</string>
+    <string name="status_not_processed">لم تتم معالجتها</string>
+    <string name="status_re_book">إعادة حجز</string>
+    <string name="status_on_hold">موقفة</string>
+    <string name="status_on_hold_two">موقفة</string>
+
+    <string name="internal_server">خطأ من النظام، من فضلك إعادة المحاولة لاحقاً</string>
+
+    <string name="close_str">إغلاق</string>
+    <string name="timeout_error_msg_two"> يرجى التحقق من اتصالك بالإنترنت أو إعادة محاولة الطلب</string>
+    <string name="error_msg_book_ticket">هناك فقط %s من دقائق الإنتظار من اجل الخدمة %s, حاول مجددا عندما تكون أقرب الي الموقع.</string>
+    <string name="error_agent_not_available">الخدمة غير متاحة في الوقت الحالي</string>
+    <string name="skip">تخطى</string>
+    <string name="instructions">تعليمات</string>
+    <string name="awaiting_processing">بانتظار بدء تقديم الخدمة</string>  <!--    bayans change 28feb-->
+    <string name="close_alert">يتوقع إغلاق الفرع قبل وصول دورك، لذا من الممكن أن لا يتم خدمتك، هل لا تزال تريد حجز تذكرتك؟</string>
+    <string name="break_alert">سوف يتم تأخير تذكرتك %s  دقائق بسب فترة إستراحة الفرع</string>
+    <string name="break_alert_confirm">هل تزال ترغب في حجز تذكرتك</string>
+
+
+    <string name="less_then_miniut">أقل من دقيقة</string>
+
+    <string name="i_understand">أتفهم ذلك</string>
+    <string name="break_branch">الفرع في إستراحة حاليًا</string>
+    <string name="book_later">سوف أحجز لاحقًا</string>
+    <string name="book_now">تأكيد الحجز</string>
+    <string name="branch_is_busy">الفرع مشغول</string>
+    <string name="open_hours_">ساعات العمل</string>
+    <string name="add_attachment">أضف مرفق</string>
+    <string name="doc_size">PNG, JPG or PDF - 3MB حجم الملف الأقصى </string>
+    <string name="doc_size_alert">3MB حجم الملف يجب أن يكون أقل من</string>
+    <string name="sucess_delete_alert">تم حذف الملف</string>
+
+    <string name="document">وثيقة</string>
+    <string name="is_required">إجباري</string>
+    <string name="missed_your_booking">هل فاتتك تذكرتك؟</string>
+    <string name="eservice">خدمة إلكترونية</string>
+    <string name="submitted">تم التقديم</string>
+    <string name="processiong_application">جار معالجة الطلب</string>
+    <string name="cancel_e_service_desc">هل أنت متأكد أنك تريد إلغاء طلبك؟ بإلغاء الطلب فإنك ستخسر تذكرتك في هذه الخدمة الإلكترونية.</string>
+
+</resources>

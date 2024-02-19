@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/home_bg_color_gray"
+        android:layoutDirection="rtl">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/clMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/collapsingToolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fitsSystemWindows="true"
+                    app:contentScrim="@color/home_bg_color_gray"
+                    app:expandedTitleMarginEnd="64dp"
+                    app:expandedTitleMarginStart="48dp"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <RelativeLayout
+                        android:background="@color/home_bg_color_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fitsSystemWindows="true"
+                        app:layout_collapseMode="parallax">
+
+
+
+                    </RelativeLayout>
+
+
+                    <androidx.appcompat.widget.Toolbar
+
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="14dp"
+                        app:layout_collapseMode="pin"
+                        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:id="@+id/imgBack"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/bg_search"
+                                android:padding="8dp"
+                                app:srcCompat="@drawable/ic_back_gray" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_weight="1"
+
+                                android:gravity="start"
+                                android:orientation="vertical">
+
+                                <com.androhub.networkmodule.uc.CustomTextView
+                                    android:id="@+id/tvBankNameTool"
+                                    style="@style/TextView_Large"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="Bank al Etihad"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/color_black"
+                                    android:textSize="20sp"
+                                    android:visibility="gone"
+                                    app:custom_font="semiBold" />
+
+                                <com.androhub.networkmodule.uc.CustomTextView
+                                    android:id="@+id/tvBranchCountTool"
+                                    style="@style/TextView_Large"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="10 Branches"
+                                    android:textColor="@color/text_view_light_color"
+                                    android:textSize="12sp"
+                                    android:visibility="gone"
+                                    app:custom_font="regular" />
+
+
+                            </LinearLayout>
+
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.appcompat.widget.Toolbar>
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:isScrollContainer="true"
+                android:measureAllChildren="true"
+
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <com.androhub.networkmodule.utils.imageSlider.SliderView
+                        android:id="@+id/sliderView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:visibility="gone"
+                        app:sliderAnimationDuration="600"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderIndicatorAnimationDuration="600"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMargin="3dp"
+                        app:sliderIndicatorMarginTop="2dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="1dp"
+                        app:sliderIndicatorRadius="1dp"
+                        app:sliderIndicatorSelectedColor="@color/indicator_enable"
+                        app:sliderIndicatorUnselectedColor="@color/indicator_disable"
+                        app:sliderScrollTimeInSec="1" />
+
+                    <LinearLayout
+                        android:layout_alignParentTop="true"
+                        android:id="@+id/llBranchMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginEnd="16dp">
+
+                        <!-- <androidx.cardview.widget.CardView
+                             android:layout_width="60dp"
+                             android:layout_height="60dp"
+                             android:translationZ="2dp"
+                             app:cardBackgroundColor="@color/white"
+                             app:cardCornerRadius="10dp"
+                             app:cardUseCompatPadding="true">
+
+                             <androidx.appcompat.widget.AppCompatImageView
+                                 android:id="@+id/ivThumb"
+                                 android:layout_width="36dp"
+                                 android:layout_height="36dp"
+                                 android:layout_gravity="center"
+                                 android:scaleType="fitXY"
+                                 app:srcCompat="@drawable/horizontal_back_image" />
+                         </androidx.cardview.widget.CardView>-->
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivThumb"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:background="@drawable/card_bg_two"
+                            android:padding="19dp"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/bg_days_gray" />
+
+                                                    <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="center"
+
+                                                        android:layout_marginEnd="8dp"
+                                                        android:orientation="vertical">
+
+                                                        <com.androhub.networkmodule.uc.CustomTextView
+                                                            android:id="@+id/tvBankName"
+                                                            style="@style/TextView_Large"
+                                                            android:textDirection="rtl"
+                                                            android:textColor="@color/color_black"
+                                                            android:textSize="20sp"
+                                                            app:custom_font="semiBold"
+                                                            />
+
+                                                        <com.androhub.networkmodule.uc.CustomTextView
+                                                            android:id="@+id/tvBranchCount"
+                                                            style="@style/TextView_Large"
+                                                            android:textDirection="rtl"
+                                                            android:ellipsize="end"
+                                                            android:gravity="center"
+                                                            android:maxLines="2"
+                                                            android:textColor="@color/text_view_light_color"
+                                                            android:textSize="12sp"
+                                                            app:custom_font="regular"
+                                                            />
+
+
+                                                    </LinearLayout>
+
+
+                    </LinearLayout>
+                    <include
+                        android:id="@+id/layoutNoData"
+                        layout="@layout/layout_no_data_found"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:visibility="gone" />
+
+
+                    <com.androhub.networkmodule.uc.CustomTextView
+                        android:id="@+id/tvNearbyTitle"
+                        style="@style/TextView_Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/nearby_branches"
+                        android:textColor="@color/font_black"
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:custom_font="semiBold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/cvImgMain"
+                        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llrvNearByBranch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/card_bg_two"
+                        android:visibility="gone">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvNearByBranch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:clipToPadding="false"
+                            tools:listitem="@layout/item_branch"
+                            android:scrollbarStyle="outsideOverlay"
+                            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <com.androhub.networkmodule.uc.CustomTextView
+                        android:id="@+id/tvOtherBranchTitle"
+                        style="@style/TextView_Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/other_branches"
+                        android:textColor="@color/font_black"
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:custom_font="semiBold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/cvImgMain"
+                        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llrvOtherBranch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="100dp"
+                        android:background="@drawable/card_bg_two"
+                        android:visibility="gone">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvOtherBranch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:clipToPadding="false"
+                            android:fastScrollEnabled="true"
+                            android:scrollbarStyle="outsideOverlay"
+                            android:splitMotionEvents="false"
+                            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <include
+            android:id="@+id/llProgressBar"
+            layout="@layout/dialog_progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </RelativeLayout>
+</layout>

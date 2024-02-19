@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="rtl">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:weightSum="2">
+
+        <com.androhub.networkmodule.uc.CustomTextView
+            android:layout_weight="1"
+            android:id="@+id/tvDay"
+            style="@style/TextView_Medium"
+            android:layout_width="0dp"
+            android:layout_marginStart="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/font_black"
+            android:textSize="11dp"
+            app:custom_font="semiBold"
+            android:gravity="start"
+            tools:text="@string/sunday"/>
+
+        <com.androhub.networkmodule.uc.CustomTextView
+            android:id="@+id/tvTime"
+            android:layout_weight="1"
+            style="@style/TextView_Medium"
+            android:layout_width="0dp"
+            android:layout_marginStart="5dp"
+            android:paddingTop="5dp"
+            android:gravity="end"
+            android:layout_marginEnd="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/font_black"
+            android:textSize="11dp"
+            app:custom_font="semiBold"
+            tools:text="@string/sunday"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

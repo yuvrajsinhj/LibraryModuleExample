@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/cvParent"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/card_bg_not_bottom_side"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/llEservice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_phone_logo2" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivLogoEservice"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitCenter"  />
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="vertical"
+
+                android:visibility="visible">
+
+
+                <com.androhub.networkmodule.uc.CustomTextView
+                    android:id="@+id/tvServiceTitle"
+                    style="@style/TextView_Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="center"
+                    android:textColor="@color/color_black"
+                    android:textSize="25sp"
+                    app:custom_font="semiBold"
+                    android:maxLines="2"
+                    android:lines="2"
+                    android:ellipsize="end"
+                    tools:text="E Servie zcasd as asd  as das das asas as das das asd  asd" />
+
+            </LinearLayout>
+
+
+
+
+            <com.mackhartley.roundedprogressbar.RoundedProgressBar
+                android:id="@+id/esProgressbar"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                app:rpbBackgroundColor="@color/grey_color2"
+                app:rpbCornerRadius="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:rpbProgressColor="@color/color_orange"
+                app:rpbShowProgressText="false" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="-4dp"
+                android:gravity="center">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.androhub.networkmodule.uc.CustomTextView
+                        android:id="@+id/tvBankNameEservice"
+                        style="@style/TextView_Large"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:textColor="@color/color_black"
+                        android:textSize="14sp"
+                        app:custom_font="semiBold"
+                        tools:text="Capital Bank" />
+
+
+
+
+                </LinearLayout>
+
+
+                <com.androhub.networkmodule.uc.CustomTextView
+                    android:id="@+id/tvDayEservice"
+                    style="@style/TextView_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_black"
+
+                    android:textSize="14sp"
+                    app:custom_font="regular"
+                    tools:text="Monday, October 26th" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/view_color" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+                <com.androhub.networkmodule.uc.CustomTextView
+                    android:layout_weight="1"
+                    android:id="@+id/tvTicketNumberRservice"
+                    style="@style/TextView_Large"
+
+                    android:layout_width="0dp"
+
+                    android:gravity="start"
+                    android:textSize="16sp"
+                    app:custom_font="bold"
+                    tools:text="A112" />
+
+
+                <com.androhub.networkmodule.uc.CustomTextView
+                    android:id="@+id/tvdescService"
+                    style="@style/TextView_Medium"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_black"
+
+                    android:textSize="14sp"
+                    app:custom_font="regular"
+                    android:gravity="end"
+                    tools:text="processiong" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_appointment_new"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/appointment_timer" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivLogoTwo"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitCenter"  />
+
+            <com.androhub.networkmodule.uc.CustomTextView
+                android:id="@+id/tvAppointmentTitleTwo"
+                style="@style/TextView_Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="@string/your_ticket_withdrawal_service"
+                android:textColor="@color/text_view_light_color"
+                android:textSize="14sp"
+                app:custom_font="regular" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="vertical"
+
+                android:visibility="visible">
+
+
+                <com.androhub.networkmodule.uc.CustomTextView
+                    android:id="@+id/tvTimeAppointmentTwo"
+                    style="@style/TextView_Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/color_black"
+                    android:textSize="35sp"
+                    app:custom_font="semiBold"
+                    tools:text="13:15-13:30" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="-4dp"
+                android:gravity="center">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.androhub.networkmodule.uc.CustomTextView
+                        android:id="@+id/tvBankNameTwo"
+                        style="@style/TextView_Large"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:textColor="@color/color_black"
+                        android:textSize="14sp"
+                        app:custom_font="semiBold"
+                        tools:text="Capital Bank" />
+
+                    <com.androhub.networkmodule.uc.CustomTextView
+                        android:id="@+id/tvBranchNameTwo"
+                        style="@style/TextView_Large"
+                        android:layout_marginTop="2dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:textColor="@color/text_view_light_color"
+                        android:textSize="12sp"
+                        app:custom_font="regular"
+                        tools:text="Capital Bank Capital" />
+
+
+                </LinearLayout>
+
+
+                <com.androhub.networkmodule.uc.CustomTextView
+                    android:id="@+id/tvDayAppomitmentTwo"
+                    style="@style/TextView_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_black"
+
+                    android:textSize="14sp"
+                    app:custom_font="regular"
+                    tools:text="Monday, October 26th" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/view_color" />
+
+            <com.androhub.networkmodule.uc.CustomTextView
+                android:id="@+id/tvTicketNumberTwo"
+                style="@style/TextView_Large"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:textSize="18dp"
+                app:custom_font="bold"
+                tools:text="A112" />
+            <com.androhub.networkmodule.uc.CustomTextView
+                android:id="@+id/tvMissedTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:background="@drawable/edit_text_background_gray"
+                android:visibility="gone"
+                app:custom_font="regular" />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llStatusTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="7dp"
+              >
+
+                <androidx.appcompat.widget.AppCompatImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/dot_red"/>
+
+                <com.androhub.networkmodule.uc.CustomTextView
+                    android:id="@+id/tvStatusTwo"
+                    style="@style/TextView_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/status_on_hold"
+                    android:textColor="@color/red_color"
+                    android:textSize="14sp"
+
+                    android:visibility="visible"
+
+                    app:custom_font="semiBold" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/dot_red"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llAppGotoCounter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_background_orange"
+                android:orientation="horizontal"
+                android:padding="5dp"
+
+                android:weightSum="3">
+
+                <com.androhub.networkmodule.uc.CustomTextView
+                    android:id="@+id/tvGotoCounterTwo"
+                    style="@style/TextView_Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:gravity="end"
+                    app:custom_font="semiBold"
+
+                    android:textColor="@color/font_grey"
+                    android:textSize="14sp"
+                    android:visibility="visible"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="0dp"
+                    android:layout_weight=".4"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_arrow_forward_24" />
+
+                <com.androhub.networkmodule.uc.CustomTextView
+                    android:id="@+id/tvLocationTwo"
+                    style="@style/TextView_Large"
+                    android:layout_gravity="center"
+                    android:textColor="@color/color_black"
+                    android:visibility="visible"
+                    android:textSize="14sp"
+                    app:custom_font="semiBold"
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1.3"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </LinearLayout>
+
+
+        <!--        /*-->
+        <!--        Instant ticket code below-->
+        <!--        */-->
+
+        <LinearLayout
+            android:id="@+id/llMAinSliderAdapter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:padding="18dp"
+                android:scaleType="fitCenter" />
+
+            <com.androhub.networkmodule.uc.CustomTextView
+                android:id="@+id/tvAppointmentTitle"
+                style="@style/TextView_Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="@string/your_ticket_withdrawal_service"
+                android:textColor="@color/text_view_light_color"
+                android:textSize="14sp"
+                app:custom_font="regular" />
+
+            <com.androhub.networkmodule.uc.CustomTextView
+                android:id="@+id/tvTicketNumber"
+                style="@style/TextView_Large"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textSize="60sp"
+                app:custom_font="bold"
+                tools:text="A112" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="-4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="-4dp"
+                android:gravity="center">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.androhub.networkmodule.uc.CustomTextView
+                        android:id="@+id/tvBankName"
+                        style="@style/TextView_Large"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:textColor="@color/color_black"
+                        android:textSize="14sp"
+                        app:custom_font="semiBold"
+                        tools:text="Capital Bank" />
+
+                    <com.androhub.networkmodule.uc.CustomTextView
+                        android:id="@+id/tvBranchName"
+                        style="@style/TextView_Large"
+                        android:layout_marginTop="2dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:textColor="@color/text_view_light_color"
+                        android:textSize="12sp"
+                        app:custom_font="regular"
+                        tools:text="Capital Bank Capital" />
+
+
+                </LinearLayout>
+
+                <com.androhub.networkmodule.uc.CustomTextView
+                    android:id="@+id/tvDate"
+                    style="@style/TextView_Large"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp"
+                    android:textColor="@color/color_black"
+                    android:textSize="16sp"
+                    app:custom_font="regular"
+                    tools:text="01/09/2020" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/view_color" />
+
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:id="@+id/llStatus"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:padding="7dp"
+    android:layout_marginTop="16dp"
+  >
+
+    <androidx.appcompat.widget.AppCompatImageView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dot_red"/>
+
+    <com.androhub.networkmodule.uc.CustomTextView
+        android:id="@+id/tvStatus"
+        style="@style/TextView_Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/status_on_hold"
+        android:textColor="@color/red_color"
+        android:textSize="14sp"
+
+        android:visibility="visible"
+
+        app:custom_font="semiBold" />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dot_red"/>
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <com.androhub.networkmodule.uc.CustomTextView
+                    android:id="@+id/tvMissed"
+                    style="@style/TextView_Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/missed_your_booking"
+
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="7dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/edit_text_background_gray"
+                    android:visibility="visible"
+                    app:custom_font="regular" />
+
+
+            <LinearLayout
+                android:id="@+id/llTicket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center">
+
+                <com.androhub.networkmodule.uc.CustomTextView
+                    android:id="@+id/tvMember"
+                    style="@style/TextView_Medium"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:drawableEnd="@drawable/ic_people_green"
+                    android:drawablePadding="4dp"
+                    android:textColor="@color/color_black"
+                    android:textSize="16sp"
+                    app:custom_font="bold"
+                    tools:text="4" />
+
+                <com.androhub.networkmodule.uc.CustomTextView
+                    android:id="@+id/tvTime"
+                    style="@style/TextView_Medium"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:drawableEnd="@drawable/ic_time_orange"
+                    android:drawablePadding="4dp"
+                    android:textColor="@color/color_black"
+                    android:textSize="16sp"
+                    app:custom_font="bold"
+                    tools:text="26:34" />
+
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llInstantCounter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_background_orange"
+                android:orientation="horizontal"
+                android:padding="7dp"
+
+               >
+
+                <com.androhub.networkmodule.uc.CustomTextView
+                    android:id="@+id/tvGotoCounter"
+                    style="@style/TextView_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:visibility="visible"
+                    app:custom_font="semiBold" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivForwardArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+
+                    android:src="@drawable/ic_baseline_arrow_forward_24" />
+
+                <com.androhub.networkmodule.uc.CustomTextView
+                    android:id="@+id/tvLocation"
+                    style="@style/TextView_Large"
+
+                    android:textColor="@color/color_black"
+                    android:visibility="visible"
+                    android:textSize="14sp"
+                    app:custom_font="semiBold"
+
+                    android:layout_width="wrap_content"
+                   />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="-5dp"
+            android:layout_marginEnd="-5dp"
+            android:layout_marginBottom="-11dp"
+            android:gravity="center"
+            android:translationZ="10dp">
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/bg_ticket_generate_two" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+
+                android:layout_weight="1">
+
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_ticket_generate" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/bg_ticket_generate_two" />
+        </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</FrameLayout>

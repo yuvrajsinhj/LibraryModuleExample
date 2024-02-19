@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_branch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <com.androhub.networkmodule.uc.CustomTextView
+                android:id="@+id/tvTitle"
+
+                style="@style/TextView_Medium"
+
+                android:gravity="start"
+                android:textDirection="firstStrongLtr"
+                android:textColor="@color/font_black"
+                android:textSize="16sp"
+                app:custom_font="semiBold"
+                tools:text="@string/services" />
+
+
+            <com.androhub.networkmodule.uc.CustomTextView
+                android:id="@+id/tvSubTitle"
+                style="@style/TextView_Medium"
+                android:layout_marginTop="4dp"
+                android:drawableStart="@drawable/ic_time_gray"
+                android:drawablePadding="4dp"
+                android:gravity="center"
+                android:textColor="@color/textview_color_extra_light"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:custom_font="regular"
+                tools:text="1.6 KM" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.androhub.networkmodule.uc.CustomTextView
+            android:id="@+id/btnMore"
+            style="@style/TextView_Medium"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_round_green_round"
+            android:drawableEnd="@drawable/ic_baseline_chevron_left_24"
+            android:gravity="center"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp"
+            android:text="@string/book"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:custom_font="semiBold" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_service"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="17dp"
+            android:visibility="gone" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:src="@drawable/ic_baseline_arrow_forward_24"/>
+
+        <com.androhub.networkmodule.uc.CustomTextView
+            android:id="@+id/btnClosed"
+            style="@style/TextView_Medium"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="end|center"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="@string/closed"
+            android:textColor="@color/font_red"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:custom_font="regular" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/view_color" />
+
+</LinearLayout>

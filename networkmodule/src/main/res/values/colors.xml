@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2CE080</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="color_black">#000000</color>
+    <color name="text_view_light_color">#8697A4</color>
+    <color name="view_color">#ECECEC</color>
+    <color name="indicator_enable">#8697A4</color>
+    <color name="indicator_disable">#4D8697A4</color>
+    <color name="trans_grey">#1A8697A4</color>
+    <color name="textview_color_extra_light">#606C74</color>
+    <color name="red_color">#F95656</color>
+    <color name="error_toast_red_color">#FEDFDF</color>
+
+
+    <!---->
+    <!--Font color-->
+    <color name="btn_default">#2CE080</color>
+    <color name="btn_default_dark">#16BA63</color>
+    <color name="font_green">#2CE080</color>
+    <color name="font_blue">#0060FF</color>
+    <color name="font_white">@android:color/white</color>
+    <color name="font_red">#F95656</color>
+    <color name="font_black">#000000</color>
+    <color name="font_grey">#606C74</color>
+    <color name="font_grey_two">#8697A4</color>
+    <color name="font_grey_two_60">#998697A4</color>
+    <color name="font_grey_conf">#969696</color>
+    <color name="botton_color_green_alpha">#DAF8E8</color>
+    <color name="botton_color_green">#2CE080</color>
+    <color name="botton_color_green_15">#262CE080</color>
+    <color name="botton_color_blue_12">#260060FF</color>
+    <color name="bg_color_gray">#666666</color>
+    <color name="bg_color_green">#113149</color>
+    <!--   <color name="bg_color_green">#0E7A6F</color>-->
+    <color name="home_bg_color_gray">#F4F7F9</color>
+    <color name="color_orange">#F6953E</color>
+    <color name="view_color_one">#D0D0D0</color>
+    <color name="botton_color_red">#feeeee</color>
+    <color name="shadow_color">#DEE3E8</color>
+    <color name="font_gray_3">#3C3C3B</color>
+    <color name="faster_branch_selection">#33DEE3E8</color>
+    <color name="color_orange_20">#33F6953E</color>
+    <color name="color_red_light">#33F95656</color>
+    <color name="grey_color">#DEE3E8</color>
+    <color name="grey_color2">#D3DAE0</color>
+    <color name="grey_color20">#33D3DAE0</color>
+    <color name="sb_swipe_bg_color_default">#4CAF50</color>
+    <color name="sb_thumb_button_color_default">#4CAF50</color>
+    <color name="sb_stroke_color_default">#FFFFFF</color>
+    <color name="sb_text_color_default">#FFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="colorAccent">#95A4B0</color>
+    <color name="colorPrimaryDark">#26000000</color>
+</resources>

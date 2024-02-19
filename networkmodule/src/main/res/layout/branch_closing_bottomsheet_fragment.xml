@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/bg_search"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_close" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appCompatImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/branch_closing"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.androhub.networkmodule.uc.CustomTextView
+            android:id="@+id/customTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/branch_is_busy"
+            android:textColor="@color/color_black"
+            android:textSize="26dp"
+
+            app:custom_font="semiBold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatImageView" />
+
+        <com.androhub.networkmodule.uc.CustomTextView
+            android:id="@+id/textDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="@string/close_alert"
+            android:textColor="@color/font_grey"
+            android:textSize="16dp"
+            app:custom_font="regular"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customTextView" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            tools:layout_editor_absoluteX="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textDescription" >
+            <com.androhub.networkmodule.uc.CustomTextView
+                android:id="@+id/btnClose"
+                style="@style/Material_Bautton"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_margin="10dp"
+                android:layout_marginStart="15dp"
+
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/btn_bg_grey"
+                android:state_pressed="false"
+                android:text="@string/i_understand"
+                android:textAlignment="center"
+                android:textColor="@color/font_black"
+                />
+
+            <com.androhub.networkmodule.uc.CustomTextView
+                android:id="@+id/txtProcced"
+                style="@style/Material_Bautton"
+                android:layout_margin="10dp"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:gravity="center"
+                android:background="@drawable/btn_shape_green_dark"
+                android:state_pressed="false"
+                android:text="@string/book_now"
+                android:textColor="@color/font_white" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

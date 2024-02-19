@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="rtl"
+        android:textDirection="firstStrongRtl">
+
+        <androidx.core.widget.NestedScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:id="@+id/rlMainP"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_color_green"
+                android:layoutDirection="rtl"
+                android:textDirection="firstStrongRtl">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/scrollMAin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="10dp"
+                    android:fillViewport="true"
+                    app:cardCornerRadius="10dp">
+
+
+                    <ScrollView
+                        android:id="@+id/cvParent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:nestedScrollingEnabled="true"
+                        android:scrollbars="none"
+
+                        >
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivLogo"
+                                android:layout_width="100dp"
+                                android:layout_height="60dp"
+                                android:padding="18dp"
+                                android:scaleType="fitCenter"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/llHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:gravity="center"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:textDirection="firstStrongRtl"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/ivLogo">
+
+
+                                <com.androhub.networkmodule.uc.CustomTextView
+
+                                    android:id="@+id/tvHeading"
+                                    style="@style/TextView_Large"
+                                    android:layout_width="match_parent"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="15dp"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:maxLines="100"
+                                    android:textColor="@color/text_view_light_color"
+                                    android:textSize="14sp"
+                                    app:custom_font="regular"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <com.androhub.networkmodule.uc.CustomTextView
+                                android:id="@+id/tvTicketNumber"
+                                style="@style/TextView_Large"
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="14dp"
+                                android:gravity="center"
+                                android:textSize="64dp"
+                                app:custom_font="bold"
+                                app:layout_constraintBottom_toTopOf="@+id/llCompanyProfile"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/llHeader" />
+
+
+                            <LinearLayout
+                                android:id="@+id/llCompanyProfile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:gravity="center_vertical"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginTop="15dp"
+                                android:layoutDirection="rtl"
+                                android:textDirection="firstStrongRtl"
+                                android:weightSum="3"
+                                app:layout_constraintBottom_toTopOf="@+id/llCentre"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tvTicketNumber">
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_weight="1.5"
+                                    android:layoutDirection="rtl"
+                                    android:orientation="vertical"
+                                    android:textDirection="firstStrongRtl">
+
+                                    <com.androhub.networkmodule.uc.CustomTextView
+                                        android:id="@+id/tvBankName"
+                                        style="@style/TextView_Large"
+                                        android:gravity="left"
+
+                                        android:layoutDirection="rtl"
+                                        android:textColor="@color/color_black"
+                                        android:textDirection="firstStrongRtl"
+                                        android:textSize="14sp"
+                                        app:custom_font="semiBold" />
+
+                                    <com.androhub.networkmodule.uc.CustomTextView
+                                        android:id="@+id/tvBranchName"
+                                        style="@style/TextView_Large"
+                                        android:gravity="left"
+                                        android:layoutDirection="rtl"
+                                        android:textColor="@color/text_view_light_color"
+                                        android:textDirection="firstStrongRtl"
+                                        android:textSize="12sp"
+                                        app:custom_font="regular" />
+
+
+                                </LinearLayout>
+
+                                <com.androhub.networkmodule.uc.CustomTextView
+                                    android:id="@+id/tvDate"
+                                    style="@style/TextView_Large"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1.5"
+                                    android:layout_marginEnd="10dp"
+                                    android:gravity="end"
+                                    android:textColor="@color/black"
+                                    android:textDirection="firstStrongRtl"
+                                    android:textSize="14sp"
+                                    android:visibility="visible"
+                                    app:custom_font="regular"
+                                    />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/llCentre"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="-10dp"
+                                android:layout_marginEnd="-10dp"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <View
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:background="@drawable/btn_round_green"
+
+                                    android:layerType="software" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/ic_doted_vertical_line"
+                                    android:layerType="software" />
+
+
+                                <View
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:background="@drawable/btn_round_green"
+                                    android:layerType="software" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llPeopleData"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="25dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="22dp"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toTopOf="@+id/txtCancel"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/llCentre">
+
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/ll_main_timer"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="visible">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:srcCompat="@drawable/ic_time_orange" />
+
+                                        <com.androhub.networkmodule.uc.CustomTextView
+                                            android:id="@+id/tvTime"
+                                            style="@style/TextView_Large"
+                                            android:layout_marginTop="16dp"
+                                            android:textColor="@color/color_black"
+                                            android:textSize="24sp"
+                                            app:custom_font="bold"
+                                            tools:text="26:34" />
+
+                                        <com.androhub.networkmodule.uc.CustomTextView
+                                            android:id="@+id/tvAwait"
+                                            style="@style/TextView_Large"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="16dp"
+                                            android:gravity="center"
+                                            android:text="@string/waiting_time_in_queue"
+                                            android:textColor="@color/text_view_light_color"
+                                            android:textSize="14sp"
+                                            app:custom_font="regular" />
+
+
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="1dp"
+                                        android:layout_height="120dp"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:background="@color/view_color_one" />
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:srcCompat="@drawable/ic_people_green" />
+
+                                        <com.androhub.networkmodule.uc.CustomTextView
+                                            android:id="@+id/tvMember"
+                                            style="@style/TextView_Large"
+                                            android:layout_marginTop="16dp"
+                                            android:textColor="@color/color_black"
+                                            android:textSize="24sp"
+                                            app:custom_font="bold"
+                                            tools:text="9" />
+
+                                        <com.androhub.networkmodule.uc.CustomTextView
+                                            style="@style/textView_helvetica_regular"
+                                            android:layout_width="wrap_content"
+                                            android:layout_marginTop="16dp"
+
+                                            android:gravity="center"
+                                            android:text="@string/people_in_queue"
+                                            android:textColor="@color/text_view_light_color"
+                                            android:textSize="14sp"
+                                            app:custom_font="regular" />
+
+
+                                    </LinearLayout>
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_event"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/ivTimer"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:srcCompat="@drawable/ic_time_orange" />
+
+                                    <com.androhub.networkmodule.uc.CustomTextView
+                                        android:id="@+id/tvTime1"
+                                        style="@style/TextView_Large"
+                                        android:layout_marginTop="16dp"
+                                        android:textColor="@color/color_black"
+                                        android:textSize="24sp"
+                                        app:custom_font="bold" />
+
+                                    <com.androhub.networkmodule.uc.CustomTextView
+                                        android:id="@+id/lblTimeFinish1"
+                                        style="@style/TextView_Large"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="16dp"
+                                        android:gravity="center"
+
+                                        android:textColor="@color/text_view_light_color"
+                                        android:textSize="14sp"
+                                        app:custom_font="regular" />
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/llInstantCounter"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="25dp"
+                                android:layout_marginEnd="15dp"
+                                android:layout_marginStart="15dp"
+                                android:background="@drawable/edit_text_background_orange"
+                                android:gravity="center"
+                                android:visibility="gone"
+                                android:orientation="horizontal"
+                                android:padding="7dp"
+
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/llCentre">
+
+                                <com.androhub.networkmodule.uc.CustomTextView
+                                    android:id="@+id/tvGotoCounter"
+                                    style="@style/TextView_Medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:textColor="@color/font_grey"
+                                    android:textSize="14sp"
+                                    android:visibility="visible"
+                                    app:custom_font="semiBold" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivForwardArrow"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+
+                                    android:src="@drawable/ic_baseline_arrow_forward_24" />
+
+                                <com.androhub.networkmodule.uc.CustomTextView
+                                    android:id="@+id/tvLocation"
+                                    style="@style/TextView_Large"
+
+                                    android:layout_width="wrap_content"
+                                    android:textColor="@color/color_black"
+                                    android:textSize="14sp"
+                                    android:visibility="visible"
+                                    app:custom_font="semiBold"
+                                    tools:text="Second Floor" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                            <com.androhub.networkmodule.uc.swipeButton.iew.Swipe_Button_View
+                                android:id="@+id/txtCancel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="25dp"
+                                android:paddingStart="7dp"
+
+                                android:paddingTop="5dp"
+                                android:paddingEnd="7dp"
+                                android:paddingBottom="5dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/llPeopleData"
+                                app:sb_swipe_bg_color="@color/botton_color_red"
+                                app:sb_swipe_both_direction="false"
+                                app:sb_swipe_reverse="false"
+
+                                app:sb_swipe_text="@string/swipte_cancel_ticket"
+                                app:sb_swipe_text_color="@color/font_red"
+                                app:sb_swipe_text_size="16sp"
+                                app:sb_thumb_bg_color="@android:color/transparent"
+
+                                app:sb_thumb_image="@drawable/ic_close_circle_red" />
+
+
+                            <com.androhub.networkmodule.uc.CustomTextView
+                                android:id="@+id/customTextView2"
+                                style="@style/TextView_Small"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="25dp"
+                                android:background="@drawable/btn_round_red"
+                                android:drawableStart="@drawable/ic_close_circle_red"
+                                android:gravity="center"
+                                android:paddingStart="20dp"
+                                android:paddingTop="9dp"
+                                android:paddingEnd="25dp"
+                                android:paddingBottom="9dp"
+                                android:text="@string/leave_queue"
+                                android:textColor="@color/font_red"
+                                android:textSize="16sp"
+                                android:visibility="gone"
+                                app:custom_font="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/llPeopleData" />
+
+                            <com.androhub.networkmodule.uc.CustomTextView
+
+                                android:id="@+id/tvsStatus"
+                                style="@style/TextView_Large"
+                                android:layout_margin="15dp"
+                                android:gravity="center"
+                                android:textColor="@color/color_black"
+                                android:textSize="16sp"
+                                android:visibility="gone"
+                                app:custom_font="semiBold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/llPeopleData" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </ScrollView>
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:id="@+id/ivClose"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/scrollMAin"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/bg_round_white"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/ic_close" />
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@+id/llProgressBar"
+            layout="@layout/dialog_progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </RelativeLayout>
+</layout>

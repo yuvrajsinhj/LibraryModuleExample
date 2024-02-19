@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">MyLib</string>
+
+
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+
+    <string name="please_grant_permission">Please grant permission</string>
+    <string name="dialog_title_permission">Permission</string>
+    <string name="settings_caps">SETTINGS</string>
+    <string name="cancel_caps">CANCEL</string>
+    <string name="no_internet_available">No internet available!</string>
+
+    <string name="str_booking">Booking</string>
+    <string name="book_an_instant_ticket">Book an instant ticket</string>
+
+    <string name="submit">Submit</string>
+
+    <string name="your_appointment_withdrawal_service">Your appointment for %s</string>
+
+    <string name="book_ticket_info">To benefit from %s services, you\ncan book an instant ticket</string>
+    <string name="book_ticket_info_other">It seems you are far from the branch, your ticket might be called before you arrive.</string>
+    <string name="confirm_book_ticket_info"><![CDATA[Please confirm booking a ticket for <b><font color=#000000>%s</font></b> at <b><font color=#000000>%s.</font></b>]]> </string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="waiting_time_in_queue">Waiting time\nin queue</string>
+    <string name="people_in_queue">People\nin queue</string>
+    <string name="leave_queue">Leave Queue</string>
+    <string name="swipte_cancel_ticket">Swipe to cancel ticket</string>
+    <string name="cancel_booking">Cancel Booking</string>
+    <string name="nearby_branches">Nearby Branches</string>
+    <string name="str_language">Language</string>
+    <string name="other_branches">Other Branches</string>
+    <string name="book">Book</string>
+    <string name="no_results_were_found">No results were found</string>
+    <string name="closed_now">Closed Now</string>
+    <string name="choose_service">Choose Service</string>
+    <string name="services">Services</string>
+    <string name="leave_queue_question_mark">Leave Queue?</string>
+    <string name="cancel_appointment">Cancel Appointment?</string>
+    <string name="are_you_sure_you_want_to_cancel_your_booking_by_cancelling_you_will_lose_your_booking">Are you sure you want to cancel your booking? By cancelling, you will lose your booking.</string>
+    <string name="confirm_booking">Confirm Booking</string>
+    <string name="open_hours">Working Hours</string>
+    <string name="something_went_working">"Something went wrong!"</string>
+    <string name="please_try_again">Server error, please try again</string>
+    <string name="internal_server">Internal server error, please try again</string>
+    <string name="stay_in_queue">Stay in Queue</string>
+    <string name="keep_booking">Keep Booking</string>
+    <string name="sucess_cancelled">Ticket cancelled successfully</string>
+    <string name="queue_not_found">Sorry, Queue is not available, please try after sometime</string>
+    <string name="today">Today</string>
+    <string name="sunday">Sunday</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="closed">Closed</string>
+    <string name="close_str">Close</string>
+    <string name="satruday">Saturday</string>
+    <string name="change_lang_one" translatable="false">العربية</string>
+    <string name="change_lang_two" translatable="false">English</string>
+    <string name="branches">&#160;Branches</string>
+    <string name="kimi">&#160;KM</string>
+    <string name="confirm_ticket_title">Confirm Ticket?</string>
+    <string name="back_to_services">Back to Services</string>
+    <string name="not_found_branch">Opps, We are unable to find branch</string>
+    <string name="inactive_branch">The branch is inactive, please contact the merchant</string>
+    <string name="inactive_merchant">The service is unavailable</string>
+    <string name="mins_suffix">&#160;Mins</string>
+    <string name="min_suffix">&#160;Min</string>
+    <string name="go_to_counter_str"><![CDATA[Go to counter <b><font color=#000000>%s</font></b>]]></string>
+    <string name="missed_your_turn"><![CDATA[<b><font color=#000000>Missed your turn! You can still head to the branch and get served within %s min</font></b>]]></string>
+    <string name="branch_str">&#160;Branch</string>
+
+    <!--ticket status-->
+    <string name="status_in_processed">In Progress</string>
+    <string name="status_processed">Processed</string>
+    <string name="status_no_show">No show</string>
+    <string name="status_cancelled">Cancelled</string>
+    <string name="status_completed">Completed</string>
+    <string name="status_not_processed">Not Processed</string>
+    <string name="status_re_book">Re-book</string>
+    <string name="status_on_hold">On Hold</string>
+    <string name="status_on_hold_two">On Hold</string>
+
+    <string name="in_error" translatable="false">Server error, please try again later</string>
+
+    <string name="timeout_error_msg_two">Please check your internet connection or retry the request</string>
+    <string name="error_msg_book_ticket">There is only %s minutes waiting time for %s service, try again when you are closer to the location</string>
+    <string name="error_agent_not_available">The service is not available in the meantime.</string>
+
+    <string name="skip">Skip</string>
+
+    <string name="security_title" translatable="false">Security Alert</string>
+    <string name="msg_emmulator" translatable="false">Rooted or virtual devices cannot run this app, please use a real device</string>
+    <string name="instructions">Instructions</string>
+    <string name="awaiting_processing">Awaiting processing</string>
+    <string name="close_alert">It seems that the branch will be closed before your turn arrives therefore your ticket may not be served, still you want to book the ticket?</string>
+    <string name="break_alert">" Your ticket will be delayed %S minutes due the branch break time,"</string>
+    <string name="break_alert_confirm">do you still wan’t to book your ticket?</string>
+    <string name="less_then_miniut">less than a  minute</string>
+
+    <string name="your_ticket_withdrawal_service">Your ticket for %s</string>
+
+    <string name="i_understand">I understand</string>
+    <string name="break_branch">Branch is taking break</string>
+    <string name="book_later">I\'ll Book Later</string>
+    <string name="branch_is_busy">Branch is busy</string>
+    <string name="book_now">Book Now</string>
+    <string name="open_hours_">Open Hours</string>
+    <string name="add_attachment">Add Attachment</string>
+    <string name="doc_size">PNG, JPG or PDF - Max file size 3MB</string>
+    <string name="doc_size_alert">file size must be smaller than 3MB</string>
+    <string name="sucess_delete_alert">File Deleted</string>
+    <string name="document">Document</string>
+    <string name="is_required">is required</string>
+    <string name="missed_your_booking">Missed your booking?</string>
+    <string name="eservice">e-Service</string>
+    <string name="submitted">Submitted</string>
+    <string name="cancel_e_service_desc">Are you sure you want to cancel your request? By cancelling, you will lose your e-service request.</string>
+    <string name="processiong_application">Processing Application</string>
+
+</resources>

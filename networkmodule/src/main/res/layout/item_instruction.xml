@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llInstruction"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+
+            android:layout_width="match_parent"
+            app:layout_constraintHeight_max="230dp"
+            app:layout_constrainedHeight="true"
+            android:layout_height="wrap_content"
+            android:layoutDirection="locale"
+            android:orientation="vertical"
+            android:textDirection="locale"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.androhub.networkmodule.uc.CustomTextView
+                style="@style/TextView_Large_extra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/instructions"
+                android:textAlignment="viewStart"
+                android:textColor="@color/font_black"
+                android:textDirection="locale"
+                android:textSize="14sp"
+                app:custom_font="semiBold" />
+
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:scrollbars="vertical"
+                android:fadeScrollbars="false"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:fillViewport="true"
+
+                android:layout_height="match_parent">
+
+                <com.androhub.networkmodule.uc.CustomTextView
+                    android:lineSpacingExtra="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:id="@+id/tvInstruction"
+                    style="@style/TextView_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/font_grey"
+                    android:textDirection="locale"
+                    android:textSize="15dp"
+                    app:custom_font="regular"
+                    tools:text="Contrary to popular belief, Lorem Ipsum is n ot simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section 1.10.32.The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham." />
+            </androidx.core.widget.NestedScrollView>
+        </androidx.appcompat.widget.LinearLayoutCompat></androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

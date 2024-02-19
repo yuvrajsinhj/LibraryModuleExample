@@ -1,0 +1,25 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:autoMirrored="true"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="@color/btn_default"
+        android:fillType="evenOdd"
+        android:pathData="M19.9995,1.9957L3.9995,1.9957C2.8946,1.9957 1.9995,2.8907 1.9995,3.9957L1.9995,21.9957L3.9995,21.9957L6.6645,18.4957L9.3345,21.9957L11.9995,18.4957L14.6645,21.9957L17.3345,18.4957L19.9995,21.9957L21.9995,21.9957L21.9995,3.9957C21.9995,2.8907 21.1045,1.9957 19.9995,1.9957M19.9995,3.9957L19.9995,18.6942L18.9261,17.2842L17.3361,15.1962L15.7445,17.2827L14.666,18.6962L13.5911,17.2842L11.9995,15.1942L10.408,17.2842L9.333,18.6962L8.2545,17.2827L6.6631,15.1962L5.0731,17.2842L3.9995,18.6942L3.9995,3.9957L19.9995,3.9957"
+        android:strokeWidth="1"
+        android:strokeColor="#00000000" />
+    <path
+        android:fillColor="@color/btn_default"
+        android:fillType="evenOdd"
+        android:pathData="M5.999,7.9959l12,0l0,-2l-12,0z"
+        android:strokeWidth="1"
+        android:strokeColor="#00000000" />
+    <path
+        android:fillColor="@color/btn_default"
+        android:fillType="evenOdd"
+        android:pathData="M7.999,11.9959l8,0l0,-2l-8,0z"
+        android:strokeWidth="1"
+        android:strokeColor="#00000000" />
+</vector>
