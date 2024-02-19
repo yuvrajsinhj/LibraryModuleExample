@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ <https://www.androhub.com>
-  ~
-  ~ Copyright (c) 2024 Androhub
-  ~ All rights reserved.
-  ~
-  ~ Last modified 12/02/24, 2:31 pm
-  -->
-
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+
+
+
+        android:supportsRtl="true"
+
+    >
+        <activity
+            android:name=".mvvm.ui.fragment.CustomerConfirmationTicketActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mvvm.ui.BranchDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mvvm.ui.BranchActivity"
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".mvvm.ui.BranchActivity" -->
+        <!-- android:exported="true"></activity> -->
+        <activity android:name=".utils.frombuilder.dynamicFormBuilder.DynamicGenerateFormActivity"
+            android:exported="false" />
+    </application>
 </manifest>
