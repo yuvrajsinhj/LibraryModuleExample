@@ -175,15 +175,10 @@ class BranchActivity : AppCompatActivity(), PermissionListener, MyLocationListen
 
     fun manageSliderVisibility(show: Boolean = true) {
 
-        if (prefManager.getBoolean(PrefConst.TICKET_BOOKED_HIDE_IMAGE_SLIDER)) {
+        if (ticketList.size > 0) {
 
             binding.sliderView.visibility = View.VISIBLE
-            binding.sliderView.setViewHeight(this.resources.getDimension(dimen(360)))
-
-        } else if (ticketList.size > 0) {
-
-            binding.sliderView.visibility = View.VISIBLE
-            binding.sliderView.setViewHeight(this.resources.getDimension(dimen(360)))
+            binding.sliderView.setViewHeight(this.resources.getDimension(R.dimen.slider_ticket_height_queue))
 
         } else {
             binding.sliderView.visibility = View.GONE
