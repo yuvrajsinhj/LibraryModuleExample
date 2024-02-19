@@ -304,7 +304,7 @@ class BranchActivity : AppCompatActivity(), PermissionListener, MyLocationListen
 
                 hashMap.put("id", UserMerchantID)
                 hashMap.put("isNearBy", "$isNearby")
-                var cc = "JO"
+                var cc = "IN"
                 hashMap.put("country", cc)
                 hashMap.put("distance", "100")
 
