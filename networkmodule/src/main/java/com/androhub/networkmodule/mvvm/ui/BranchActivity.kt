@@ -334,7 +334,7 @@ class BranchActivity : AppCompatActivity(), PermissionListener, MyLocationListen
                 }
                 hashMap.put("id", UserMerchantID)
                 hashMap.put("isNearBy", "$isNearby")
-                var cc = "JO"
+                var cc = "IN"
                 hashMap.put("country", cc)
                 hashMap.put("distance", "0")
 
@@ -834,14 +834,6 @@ class BranchActivity : AppCompatActivity(), PermissionListener, MyLocationListen
                             .putExtra(Constant.INTENT_EXTRA.DO_NOT_REFRESH, true)
                     )
             }
-//            R.id.toolbarImage -> {
-//                if (binding.toolbarImage.getTag() != null) {
-//                    var imageUrl = binding.toolbarImage.getTag().toString()
-//                    if (!TextUtils.isEmpty(imageUrl))
-//                        loadZoomImage(this, imageUrl!!, 0)
-//
-//                }
-//            }
             R.id.imgBack -> {
                 finish()
             }
@@ -1092,20 +1084,8 @@ class BranchActivity : AppCompatActivity(), PermissionListener, MyLocationListen
     override fun onPermissionDenied(deniedPermissions: MutableList<String>?) {
        Log.e("sss","sdsdsd")
 
-
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-//        if (requestCode == Constant.GPS_REQUEST && resultCode == Activity.RESULT_OK) {
-//
-//
-//        } else if (requestCode == Constant.GPS_REQUEST) {
-//
-//        }
-
-    }
 
     fun getUserLongitude(activity: Activity?): String {
         //  return "35.8377"
@@ -1155,6 +1135,7 @@ class BranchActivity : AppCompatActivity(), PermissionListener, MyLocationListen
 
 
                 } catch (e: Exception) {
+                    Toast.makeText(this, "-$e",Toast.LENGTH_SHORT).show()
                 }
 
             }
@@ -1162,48 +1143,17 @@ class BranchActivity : AppCompatActivity(), PermissionListener, MyLocationListen
         }
         timerHandler.post(updater!!)
     }
-//    fun setLocale(lang: String?) {
-//        val myLocale = Locale("ar")
-//        val res = resources
-//        val dm = res.displayMetrics
-//        val conf: Configuration = res.configuration
-//        conf.locale = myLocale
-//        res.updateConfiguration(conf, dm)
-//        val refresh = Intent(this, BranchTwoActivity::class.java)
-//        finish()
-//        startActivity(refresh)
-//    }
 
     private fun updateLanguage() {
 
+        try {
+            MyApplication.localeManager.setNewLocale(this, resources.configuration.locale.toString())
 
-        MyApplication.localeManager.setNewLocale(this, resources.configuration.locale.toString())
-
-        if (!Locale.getDefault().language.equals(MyApplication.getAppManager().prefManager.language)){
-            MyApplication.localeManager.setNewLocale(this, MyApplication.getAppManager().prefManager.language)
+        }catch (e:Exception){
+            Toast.makeText(this, "-$e",Toast.LENGTH_SHORT).show()
         }
 
+
     }
-//    private fun setNewLocale(
-//        language: String,
-//    ): Boolean {
-//        Utils.print("sDefSystemLanguage setNewLocale=" + language)
-//
-//
-//        // setting new language , replace -gb because to make server name and local name
-//       MyApplication. localeManager.setNewLocale(this, language)
-//
-//        val intent = Intent(this, BranchTwoActivity::class.java)
-//        /*intent.putExtra(
-//            Constant.INTENT_EXTRA.IS_TICKET_BOOKING,
-//            isTicketBooking
-//        )*/
-//        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-//        startActivity(intent)
-//        this.finishAffinity()
-//        //to restart app after language change
-//        //  Process.killProcess(Process.myPid())
-//        //System.exit(0)
-//        return true
-//    }
+
 }
