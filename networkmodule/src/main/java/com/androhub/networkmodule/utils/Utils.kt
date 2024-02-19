@@ -2,6 +2,9 @@ package com.androhub.networkmodule.utils
 
 import android.app.Activity
 import android.content.Context
+import android.location.Geocoder
+import android.os.Build
+import android.telephony.TelephonyManager
 import android.text.TextUtils
 import android.view.View
 
@@ -11,8 +14,11 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
 import com.androhub.networkmodule.AppManager
 import com.androhub.networkmodule.MyApplication
+import com.androhub.networkmodule.PrefConst
 import com.androhub.networkmodule.PrefManager
 import com.androhub.networkmodule.R
+import com.google.android.gms.common.ConnectionResult
+import com.google.android.gms.common.GoogleApiAvailability
 
 import com.google.android.material.snackbar.Snackbar
 import java.text.DecimalFormat
@@ -323,6 +329,154 @@ object Utils {
             view.startAnimation(anim)
         }
         return view
+    }
+    fun getDetectedCountryTwo(context: Context, defaultCountryIsoCode: String = ""): String {
+
+        try {
+//            return "IN"
+
+            var net = "";
+            var locale = "";
+            var sim = "";
+
+            try {
+                detectNetworkCountry(context)?.let {
+                    net = it
+                }
+
+                detectLocaleCountry(context)?.let {
+                    locale = it
+                }
+
+
+                detectSIMCountry(context)?.let {
+                    sim = it
+                }
+                print("Country----net--" + net)
+                print("Country----locale--" + locale)
+                print("Country----sim--" + sim)
+            } finally {
+
+                var country =
+                    if (!TextUtils.isEmpty(net)) net else if (!TextUtils.isEmpty(locale)) locale else if (!TextUtils.isEmpty(
+                            sim
+                        )
+                    ) sim else defaultCountryIsoCode
+                var countryTwo = ""
+
+                var lat =
+                    (MyApplication.getAppManager().prefManager.getString(PrefConst.USER_CURRENT_LAT_TEMP))
+                var lng =
+                    (MyApplication.getAppManager().prefManager.getString(PrefConst.USER_CURRENT_LNG_TEMP))
+
+                if (TextUtils.isEmpty(country) && !TextUtils.isEmpty(lat) && !TextUtils.isEmpty(lng) && isGmsAvailable(
+                        context
+                    )
+                ) {
+                    var latDouble = lat.toDouble()
+                    var lngDouble = lng.toDouble()
+                    countryTwo = getAddressFromGPS(context, latDouble, lngDouble)
+
+
+                }
+
+                if (!TextUtils.isEmpty(countryTwo)) {
+                    return countryTwo
+                } else if (!TextUtils.isEmpty(country)) return country
+                else return Constant.DEFAULT_COUNTRY
+            }
+        } catch (e: Exception) {
+            return Constant.DEFAULT_COUNTRY
+        }
+    }
+    private fun detectLocaleCountry(context: Context): String? {
+        try {
+            /*val localeCountryISO = context.getResources().getConfiguration().locale.getCountry()
+            //3Log.d(TAG, "detectNetworkCountry: $localeCountryISO")
+            return localeCountryISO*/
+            val locale: String
+            locale = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                context.resources.configuration.locales[0].country
+            } else {
+                context.resources.configuration.locale.country
+            }
+            return locale
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+        return null
+    }
+    private fun getAddressFromGPS(
+        context: Context,
+        latitude: Double,
+        longitude: Double,
+    ): String {
+        if (!isGmsAvailable(context)) return ""
+
+        val geoCoder = Geocoder(context, Locale.getDefault())
+        try {
+            val addresses = geoCoder.getFromLocation(latitude, longitude, 1)
+            var country =
+                (if (addresses != null && addresses.size > 0 && addresses[0].countryCode == null) "" else addresses?.get(
+                    0
+                )?.countryCode)
+            if (TextUtils.isEmpty(country)) {
+                return Constant.DEFAULT_COUNTRY
+            } else {
+                /*  var half=getCountryCode(country)
+
+                 if (TextUtils.isEmpty(half))
+                 {
+                     return ""
+                 }else*/
+                print("gpsCountry=" + country)
+                return country!!
+            }
+
+
+        } catch (e: Exception) {
+            return Constant.DEFAULT_COUNTRY
+            //Time Out in getting address
+
+        }
+    }
+
+    fun getCountryCode(countryName: String) =
+        Locale.getISOCountries().find { Locale("", it).displayCountry == countryName }
+
+    private fun detectSIMCountry(context: Context): String? {
+        try {
+            val telephonyManager =
+                context.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
+            //Log.d(TAG, "detectSIMCountry: ${telephonyManager.simCountryIso}")
+            return telephonyManager.simCountryIso
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+        return null
+    }
+
+    private fun detectNetworkCountry(context: Context): String? {
+        try {
+            val telephonyManager =
+                context.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
+            //Log.d(TAG, "detectNetworkCountry: ${telephonyManager.simCountryIso}")
+            return telephonyManager.networkCountryIso
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+        return null
+    }
+    @JvmStatic
+    fun isGmsAvailable(context: Context?): Boolean {
+        var isAvailable = false
+        if (null != context) {
+            val result = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(context)
+            isAvailable = ConnectionResult.SUCCESS == result
+        }
+
+        print("isGmsAvailable: $isAvailable")
+        return isAvailable
     }
 
 }

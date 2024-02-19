@@ -126,7 +126,6 @@ class BranchActivity : AppCompatActivity(), PermissionListener, MyLocationListen
             ticketList = MyApplication.getAppManager().prefManager.savedTicketList
         } catch (e: Exception) {
             prefManager.saveTicketList(null)
-//                prefManager.saveHistoryTicketList(null)
         }
         setSliderAdapter()
         refreshTicketListRepeat()
@@ -299,7 +298,7 @@ class BranchActivity : AppCompatActivity(), PermissionListener, MyLocationListen
 
                 hashMap.put("id", UserMerchantID)
                 hashMap.put("isNearBy", "$isNearby")
-                var cc = "IN"
+                var cc = Utils.getDetectedCountryTwo(this).toUpperCase()
                 hashMap.put("country", cc)
                 hashMap.put("distance", "100")
 
@@ -329,7 +328,7 @@ class BranchActivity : AppCompatActivity(), PermissionListener, MyLocationListen
                 }
                 hashMap.put("id", UserMerchantID)
                 hashMap.put("isNearBy", "$isNearby")
-                var cc = "IN"
+                var cc = Utils.getDetectedCountryTwo(this).toUpperCase()
                 hashMap.put("country", cc)
                 hashMap.put("distance", "0")
 
